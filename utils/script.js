@@ -18,6 +18,7 @@ var saveButton = $(".saveBtn").on("click", saveFunction); // using jquery for ad
 
 var textArea = $("#task-hour");
 
+var localText = $(".task-hour").val();
 
 
 
@@ -34,7 +35,7 @@ function saveFunction(e) {
     // console.log(innerText)
 
     
-    localStorage.setItem("textarea", JSON.stringify(taskHourEl));
+    localStorage.setItem("myText", taskHourEl);
     
 
     
@@ -49,18 +50,9 @@ loadText();
 
 function loadText() {
 
-    var savedText = localStorage.getItem("textarea");
+    var savedText = localStorage.getItem("myText");
 
-    // if saved text is empty return false 
-
-    if(savedText === "") {
-        return console.log("nothing in there");
-    } else {
-        console.log("returned a value ")
-    }
-  
-    
-
+    localText = savedText;
 }
 
 
