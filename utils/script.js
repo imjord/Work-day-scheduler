@@ -38,17 +38,27 @@ function saveFunction(e) {
     
 
     
-
+loadText();
 
 }
 
 
 
 
-// saving data to local storage 
+// loading  data from  local storage 
 
-function saveText() {
+function loadText() {
 
+    var savedText = localStorage.getItem("textarea");
+
+    // if saved text is empty return false 
+
+    if(savedText === "") {
+        return console.log("nothing in there");
+    } else {
+        console.log("returned a value ")
+    }
+  
     
 
 }
