@@ -7,6 +7,7 @@
 
 
 
+// moment js current day 
 
 
 
@@ -15,24 +16,42 @@
 
 var saveButton = $(".saveBtn").on("click", saveFunction); // using jquery for add event listener to listen for a click then run save function .
 
-
+var textArea = $("#task-hour");
 
 
 
 
 
 // save function that captures the value of textarea 
-function saveFunction() {
+function saveFunction(e) {
+
+    e.preventDefault();
 
     var taskHourEl = $("#task-hour").val();
     console.log(taskHourEl);
 
-    var innerText = $(this).text();
-    console.log(innerText)
+    // var innerText = $(this).text();
+    // console.log(innerText)
+
+    
+    localStorage.setItem("textarea", JSON.stringify(taskHourEl));
+    
+
+    
+
+
 }
 
 
 
+
+// saving data to local storage 
+
+function saveText() {
+
+    
+
+}
 
 
 
@@ -41,9 +60,39 @@ function saveFunction() {
 //add a function that loads on page load grabbing todays date and adding it to the text content .
 
 
+function currentTimes(){
+
+    var momentDay = moment().format("ddd, hA");
+    var dayEl = $("p#currentDay").html(momentDay);
 
 
 
+
+
+
+
+
+
+
+
+    if(moment().isAfter(dayEl)){
+        textArea.addClass("list-group-item-danger");
+    }
+
+
+
+    // console.log(dayEl.text);
+
+    // var currentMoment = moment().format("ddd, hA");
+
+    // var currentDay = $("#currentDay").innerText[currentMoment];
+    
+    
+
+
+}
+
+currentTimes();
 
 
 
