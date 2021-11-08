@@ -39,7 +39,7 @@ function saveFunction(e) {
     
 
     
-loadText();
+// loadText();
 
 }
 
@@ -62,7 +62,7 @@ function loadText() {
 //add a function that loads on page load grabbing todays date and adding it to the text content .
 
 
-function currentTimes(){
+function currentTime(){
 
     var momentDay = moment().format("ddd, hA");
     var dayEl = $("p#currentDay").html(momentDay);
@@ -83,7 +83,7 @@ function currentTimes(){
 
 
 
-    // console.log(dayEl.text);
+    console.log()
 
     // var currentMoment = moment().format("ddd, hA");
 
@@ -94,7 +94,7 @@ function currentTimes(){
 
 }
 
-currentTimes();
+currentTime();
 
 
 
