@@ -28,7 +28,7 @@
 
   ##### Repo License: NONE
 
-  #### Repo Info: This is for challenge 5. Still a work in progress.
+  #### Repo Info: Still a work in progress.
 
   #### Badge: 
 
